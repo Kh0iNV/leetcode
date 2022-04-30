@@ -10,6 +10,8 @@ type Point struct {
 
 // Ý tưởng 1: tạo ra mảng lưu lại tọa độ các điểm trong hành trình
 // Duyệt trong mảng, nếu có 2 điểm trùng nhau => return true
+// O(N)
+// O(N)
 func isPathCrossing(path string) bool {
   x := 0
   y := 0
@@ -46,6 +48,8 @@ func checkDuplicate(list []Point) bool {
 }
 
 // Ý tưởng 2: tạo ra map lưu lại tạo đổ hành trình "00" true
+// O(N)
+// O(N)
 func isPathCrossing2(path string) bool {
   x := 0
   y := 0

@@ -21,6 +21,8 @@ var monthMap = map[string]string {
   "Dec": "12",
 }
 
+// O(1)
+// O(1)
 func reformatDate(date string) string {
   if len(date) == 12 {
     date = "0" + date
@@ -28,6 +30,3 @@ func reformatDate(date string) string {
   a := strings.Split(date, " ")
   return fmt.Sprintf("%s-%s-%s", a[2], monthMap[a[1]], a[0][:2])
 }
-
-// O(1)
-// O(1)

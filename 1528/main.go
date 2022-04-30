@@ -2,6 +2,8 @@
 package main
 
 // Dùng mảng byte
+// O(N)
+// O(N)
 func restoreString(s string, indices []int) string {
   var result = make([]byte, len(indices))
   for i := range result {
@@ -18,6 +20,3 @@ func restoreString2(s string, indices []int) string {
   }
   return string(result)
 }
-
-// O(N)
-// O(N)

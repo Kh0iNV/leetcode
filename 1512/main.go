@@ -1,8 +1,8 @@
 //Leetcode - Problem 1512 - Number of good pairs
 package main
 
-// Độ phức tạp O(N^2)
-// Không gian bộ nhớ O(1)
+// O(N^2)
+// O(1)
 func numIdenticalPairs(nums []int) int {
   var count = 0
   for i, val := range nums {
@@ -16,8 +16,8 @@ func numIdenticalPairs(nums []int) int {
 }
 
 // Cách 2: tính số lần xuất hiện => suy ra số cặp
-// Độ phức tạp O(N)
-// Không gian bộ nhớ O(N)
+// O(N)
+// O(N)
 func numIdenticalPairs2(nums []int) int {
   var count = 0
   var freq = make(map[int]int)
