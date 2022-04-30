@@ -1,4 +1,5 @@
-package leetcode
+//Leetcode - Problem 1512 - Number of good pairs
+package main
 
 // Độ phức tạp O(N^2)
 // Không gian bộ nhớ O(1)

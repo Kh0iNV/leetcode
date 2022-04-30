@@ -1,7 +1,7 @@
+//Leetcode - Problem 1502 - Can make arithmetic progression from sequence
 package main
 
 import "sort"
-import "fmt"
 
 // Cách này chậm, do phải sort trước, độ phức tạp = độ phức tạp của sort.Ints() = O(N^2) insertion sort
 func canMakeArithmeticProgression(arr []int) bool {
@@ -20,34 +20,35 @@ func canMakeArithmeticProgression(arr []int) bool {
 }
 
 // (Số lớn nhất - Số bé nhất) / (số phần tử - 1) == step
+// O(N)
+// O(N)
 func canMakeArithmeticProgression2(arr []int) bool {
   min := arr[0]
-  max := arr[0]
-  step := 0
+  max := arr[1]
+  M := make(map[int]bool)
+  N := len(arr)
 
-  for i := 0; i < len(arr); i++ {
-    localDiff := 0
+  for i := 0; i < N; i++ {
     if min > arr[i] {
-      localDiff = min - arr[i]
       min = arr[i]
     }
     if max < arr[i] {
-      localDiff = arr[i] - max
       max = arr[i]
     }
-    fmt.Println(localDiff)
-    if localDiff != 0 && localDiff < step {
-      step = localDiff
-    }
+    M[arr[i]] = true
   }
-  fmt.Println(max, min, step)
-  if step == 0 {
+
+  if (max - min) % (N-1) != 0 {
     return false
   }
-  return (max - min) / (len(arr)-1) == step
-}
 
-func main() {
-  a := canMakeArithmeticProgression2([]int{3, 9, 1, 5, 7})
-  fmt.Println(a)
+  diff := (max - min) / (N - 1)
+  for min < max {
+    min += diff
+    _, isExist := M[min]
+    if !isExist {
+      return false
+    }
+  }
+  return true
 }

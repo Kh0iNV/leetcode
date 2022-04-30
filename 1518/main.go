@@ -1,4 +1,5 @@
-package leetcode
+//Leetcode - Problem 1518 - Water Bottles
+package main
 
 // Với n là số chai nước đầu vào thì thuật toán không thể vượt qua n step => độ phức tạp O(logN)
 // Dùng 2 biến resutl, emptyBottles để lưu giá trị => không gian bộ nhớ O(1)

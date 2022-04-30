@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import "testing"
 
@@ -10,7 +10,7 @@ func TestNumWaterBottles(t *testing.T) {
   } {
     {9, 3, 13},
     {15, 4, 19},
-    {120, 17, 30},
+    {120, 17, 127},
   }
 
   for _, tc := range testcase {
@@ -28,6 +28,7 @@ func TestNumWaterBottles2(t *testing.T) {
   } {
     {9, 3, 13},
     {15, 4, 19},
+    {120, 17, 127},
   }
 
   for _, tc := range testcase {
