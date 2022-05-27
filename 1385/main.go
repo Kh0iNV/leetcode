@@ -29,7 +29,8 @@ func abs(x int) int {
 // O(NlogN)
 // O(1)
 func findTheDistanceValue2(arr1 []int, arr2 []int, d int) int {
-  result := 0
+  result := 0\
+  // NlogN
   sort.Ints(arr2)
 
   Outer:
